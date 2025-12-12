@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Comprehensive Performance Testing & Analysis Using K6 - Detailed Report</title>
+    <title>Comprehensive Performance Testing & Analysis Using K6 </title>
     <style>
         body {
             font-family: 'Helvetica Neue', Arial, sans-serif;
@@ -255,11 +255,17 @@
     <div class="figure">
         <p><strong>Figure 1: K6 Load Test Saturation Analysis (Throughput vs. Latency)</strong></p>
         <img src="assets/performance_graph_breakpoint.png" alt="K6 Performance Test Results Graph showing Throughput plateauing and Latency spiking sharply at the saturation point.">
-        <p><em>(<strong>NOTE:</strong> Please replace the path <code>assets/performance_graph_breakpoint.png</code> with the actual file path where you upload your Breakpoint Test graph.)</em></p>
+        </em></p>
     </div>
 
     <h3>7.2 Capacity Test Results</h3>
     <p>The one-hour soak test, executed at a sustained load of 300 VUs, revealed **latent instability**. While the system remained functional, a subtle but persistent **latency creep** was observed, with the average response time gradually increasing by about 10% over the duration. This phenomenon is a serious indicator of low-level resource issues, such as database connection pool fragmentation or minor, uncollected memory pressure, which can lead to major, slow-onset outages during prolonged peak load events.</p>
+<h3>Capacity Test Results Visualization</h3>
+<div class="figure">
+    <p><strong>Figure 3: K6 Capacity Test Analysis (Latency Creep)</strong></p>
+    <img src="assets/performance_graph_capacity.png" alt="K6 Capacity Test Results Graph showing latency creep over time during sustained load.">
+    <p><em>(NOTE: This graph visualizes the one-hour sustained load test results.)</em></p>
+</div>
 
     <h3>7.3 Ramp-Up Test (Load Test) Results</h3>
     <p>The Ramp-Up Test, simulating progressive traffic increases, assessed scalability up to the pre-determined safe operational limit.</p>
@@ -272,7 +278,7 @@
     <div class="figure">
         <p><strong>Figure 2: K6 Load Test Ramp-Up Analysis (Linear Scaling Demonstration)</strong></p>
         <img src="assets/performance_graph_rampup.png" alt="K6 Performance Test Results Graph showing linear Throughput increase and stable Latency during Ramp-Up stages.">
-        <p><em>(<strong>NOTE:</strong> Please replace the path <code>assets/performance_graph_rampup.png</code> with the actual file path where you upload your Ramp-Up Test graph.)</em></p>
+        </em></p>
     </div>
 
     <h2>8. Deep Performance Interpretation</h2>
